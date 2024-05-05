@@ -1,0 +1,13 @@
+version: "3"
+
+tasks:
+  migrate: 
+    aliases:
+      - mig
+    desc: "Migrate database"
+    cmds:
+      - go run cmd/migrator/main.go --storage-path=./storage/todo.db --migrations-path=./db/migrations
+  start:
+    desc: "Start server"
+    cmds:
+      - go run cmd/api/main.go

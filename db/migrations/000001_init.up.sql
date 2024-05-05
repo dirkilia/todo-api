@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS tasks
+(
+    id        INTEGER PRIMARY KEY,
+    title     TEXT NOT NULL,
+    is_finished BOOLEAN NOT NULL, 
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
